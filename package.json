@@ -2,7 +2,7 @@
   "name": "grunt-recurse",
   "version": "0.0.0",
   "description": "Helpers to load and use recursive Gruntfiles.",
-  "main": "src/lib/grunt/recurse.js",
+  "main": "./src/lib/recurse.js",
   "scripts": {
     "test": "grunt test"
   },
@@ -22,6 +22,10 @@
     "url": "https://github.com/DavidSouther/grunt-recurse/issues"
   },
   "devDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "coffee-script": "~1.6.3"
+  },
+  "peerDependencies": {
+    "coffee-script": "~1.6.3"
   }
 }
