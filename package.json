@@ -1,0 +1,27 @@
+{
+  "name": "grunt-recurse",
+  "version": "0.0.0",
+  "description": "Helpers to load and use recursive Gruntfiles.",
+  "main": "src/lib/grunt/recurse.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DavidSouther/grunt-recurse.git"
+  },
+  "keywords": [
+    "grunt",
+    "recurse",
+    "submodule",
+    "subtasks"
+  ],
+  "author": "David Souther",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidSouther/grunt-recurse/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
