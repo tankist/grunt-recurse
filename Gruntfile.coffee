@@ -8,5 +8,7 @@ module.exports = (grunt)->
 
     grunt.initConfig grunt.Config
 
+    grunt.loadNpmTasks task for task in grunt.NpmTasks
+
     grunt.registerTask 'test', ['testTask']
     grunt.registerTask 'default', ['test']

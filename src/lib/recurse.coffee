@@ -14,3 +14,9 @@ module.exports = (grunt, root)->
                 for k, v of c
                     _config[t][k] = v
             grunt
+
+    Object.defineProperty grunt, 'NpmTasks', do->
+        _tasks = []
+        get: -> _tasks
+        set: (val)->
+            _tasks = _tasks.concat val
