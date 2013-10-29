@@ -6,5 +6,7 @@ module.exports = (grunt)->
 
     grunt.grunt Path.join('src', 'test')
 
+    grunt.initConfig grunt.Config
+
     grunt.registerTask 'test', ['testTask']
     grunt.registerTask 'default', ['test']
