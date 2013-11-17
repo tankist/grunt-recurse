@@ -6,12 +6,10 @@ module.exports = (grunt)->
     module = './' + grunt.file.readJSON('package.json').main
     require(module)(grunt, __dirname)
 
-
     # Recursively load the configuration in src/test/Gruntfile.coffee
     grunt.grunt Path.join('src', 'test')
 
     # Finally, our project's root tasks.
-    grunt.registerTask 'test', ['testTask']
     grunt.registerTask 'default', ['test']
 
     grunt.finalize()
