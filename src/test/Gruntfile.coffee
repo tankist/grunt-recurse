@@ -14,7 +14,11 @@ module.exports = (grunt)->
 
     # The equal operator is overloaded to be array concatenation. The
     # right hand side can be either a string or array of strings.
-    grunt.NpmTasks = 'grunt-contrib-copy'
+    # Note, however, that all `grunt-*` tasks in node_modues will be
+    # loaded by grunt-recurse automatically.
+    # TODO rework this to use a non-NPM task list.
+    # TODO add grunt.Tasks = '' to load local tasks.
+    # grunt.NpmTasks = 'grunt-contrib-copy'
 
     grunt.registerTask 'testTask', ['testMulti:base', 'copy:test']
 

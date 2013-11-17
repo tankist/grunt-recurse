@@ -12,7 +12,9 @@ module.exports = (grunt)->
     # After all the subGrunts have been loaded, finalize the config info.
     grunt.initConfig grunt.Config
 
-    # Load all the requested tasks from NPM.
+    # Load all the requested tasks from NPM, as well as all installed
+    # grunt-* installed modules.
+    require('load-grunt-tasks')(grunt)
     grunt.loadNpmTasks task for task in grunt.NpmTasks
 
     # Finally, our project's root tasks.
