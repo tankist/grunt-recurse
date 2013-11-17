@@ -24,4 +24,4 @@ module.exports = (grunt)->
 
     grunt.registerMultiTask 'testMulti', 'Demonstrate grunt-recurse grunt.Config assigns correctly.', ->
         if this.data.foo isnt 'bar'
-            throw 'Config data not received.'
+            throw new Error 'Config data not received.'
