@@ -20,8 +20,14 @@ module.exports = (grunt)->
     # TODO add grunt.Tasks = '' to load local tasks.
     # grunt.NpmTasks = 'grunt-contrib-copy'
 
-    grunt.registerTask 'testTask', ['testMulti:base', 'copy:test']
+    grunt.registerTask 'testTask', ['testMulti:base', 'testPkg', 'copy:test']
 
     grunt.registerMultiTask 'testMulti', 'Demonstrate grunt-recurse grunt.Config assigns correctly.', ->
         if this.data.foo isnt 'bar'
             throw new Error 'Config data not received.'
+
+    grunt.registerTask 'testPkg', 'Ensure grunt-recurse puts package on the grunt object.', ->
+        if grunt.pkg is undefined
+            throw new Error 'package.json not exported on grunt object.'
+        if grunt.pkg.name isnt 'grunt-recurse'
+            throw new Error 'Wrong package.json exported.'

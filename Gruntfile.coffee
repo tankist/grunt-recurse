@@ -6,6 +6,9 @@ module.exports = (grunt)->
     module = './' + grunt.file.readJSON('package.json').main
     require(module)(grunt, __dirname)
 
+    # Export the current package.json
+    grunt.pkg = grunt.file.readJSON('package.json')
+
     # Recursively load the configuration in src/test/Gruntfile.coffee
     grunt.grunt Path.join('src', 'test')
 
