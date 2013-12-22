@@ -99,6 +99,9 @@ definitions.
 
 ## Changelog
 
+### 0.2.1 on 2013-12-22
+ - No longer warns that grunt-recurse isn't a loadable grunt task.
+
 ### 0.2.0 on 2013-11-17
  - `load-grunt-tasks` to load all npm tasks saved in package.json
  - Remove coffee-script dependency.
