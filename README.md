@@ -99,12 +99,12 @@ definitions.
 
 ## Changelog
 
-### 0.2.0 2013-11-17
+### 0.2.0 on 2013-11-17
  - `load-grunt-tasks` to load all npm tasks saved in package.json
  - Remove coffee-script dependency.
  - Automatically finalize Grunt configuration.
  - Updated documentation.
 
-### 0.1.0 2013-10-29
+### 0.1.0 on 2013-10-29
  - `grunt.grunt` to load submodule grunt files.
  - `grunt.Config = {configobject}` to set task config properties.

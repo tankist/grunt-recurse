@@ -30,5 +30,6 @@ module.exports = (grunt, root)->
 
         # Load all the requested tasks from NPM, as well as all installed
         # grunt-* installed modules.
-        require('load-grunt-tasks')(grunt)
+        pattern = ['grunt-*', '!grunt-recurse']
+        require('load-grunt-tasks')(grunt, {pattern})
         grunt.loadNpmTasks task for task in grunt.NpmTasks
