@@ -13,9 +13,12 @@ module.exports = (grunt, root)->
         get: -> _config
         set: (val)->
             for t, c of val
-                _config[t] = _config[t] || {}
-                for k, v of c
-                    _config[t][k] = v
+                if typeof c is 'object'
+                    _config[t] = _config[t] || {}
+                    for k, v of c
+                        _config[t][k] = v
+                else
+                    _config[t] = c
             grunt
 
     Object.defineProperty grunt, 'NpmTasks', do->

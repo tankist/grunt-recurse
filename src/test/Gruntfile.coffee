@@ -6,6 +6,7 @@ module.exports = (grunt)->
      target is overwritten.
     ###
     grunt.Config =
+        version: 'v1'
         testMulti:
             base:
                 foo: 'bar'
@@ -27,6 +28,7 @@ module.exports = (grunt)->
     grunt.registerTask 'test', [
         'testMulti:base',
         'testPkg',
+        'testScalar',
         'copy:test'
     ]
 
@@ -39,3 +41,7 @@ module.exports = (grunt)->
             throw new Error 'package.json not exported on grunt object.'
         if grunt.pkg.name isnt 'grunt-recurse'
             throw new Error 'Wrong package.json exported.'
+
+    grunt.registerTask 'testScalar', 'Ensure grunt-recurse correctly parse scalar value', ->
+        if grunt.config.data.version isnt 'v1'
+            throw new Error 'Scalar variable "version" parsed incorrectly'
