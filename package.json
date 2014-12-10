@@ -1,6 +1,6 @@
 {
   "name": "grunt-recurse",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Helpers to load and use recursive Gruntfiles.",
   "main": "./src/lib/recurse.coffee",
   "scripts": {
