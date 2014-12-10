@@ -28,7 +28,8 @@ module.exports = (grunt)->
     grunt.registerTask 'test', [
         'testMulti:base',
         'testPkg',
-        'testScalar'
+        'testScalar',
+        'copy:test'
     ]
 
     grunt.registerMultiTask 'testMulti', 'Demonstrate grunt-recurse grunt.Config assigns correctly.', ->
