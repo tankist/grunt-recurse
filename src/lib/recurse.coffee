@@ -9,7 +9,7 @@ module.exports = (grunt, root)->
         other(grunt)
 
     Object.defineProperty grunt, 'Config', do->
-        _config = {}
+        _config = grunt.config.data
         get: -> _config
         set: (val)->
             for t, c of val
